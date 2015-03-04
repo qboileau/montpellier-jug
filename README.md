@@ -2,5 +2,7 @@
 
 # Installation
 
+```bash
 > mvn install
 > mvn wisdom:run
+```
