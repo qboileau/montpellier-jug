@@ -19,6 +19,11 @@
  */
 package sample;
 
+import java.util.Arrays;
+import java.util.List;
+
+import model.News;
+
 import org.wisdom.api.DefaultController;
 import org.wisdom.api.annotations.Controller;
 import org.wisdom.api.annotations.Route;
@@ -38,7 +43,7 @@ public class WelcomeController extends DefaultController {
      */
     @View("welcome")
     Template welcome;
-
+    
     /**
      * The action method returning the welcome page. It handles
      * HTTP GET request on the "/" URL.
@@ -48,6 +53,25 @@ public class WelcomeController extends DefaultController {
     @Route(method = HttpMethod.GET, uri = "/")
     public Result welcome() {
         return ok(render(welcome, "welcome", "Welcome to Wisdom Framework!"));
+    }
+    
+    /**
+     * NEWS PART
+     */
+    
+    @View("news")
+    Template news;
+    
+    List<News> news() {
+        return Arrays.asList(
+            new News("Nouveau site", "Trop bien ;)"),
+            new News()
+        );
+    }
+    
+    @Route(method = HttpMethod.GET, uri = "/news")
+    public Result defaultView() {
+        return ok(render(news, "news", news()));
     }
 
 }

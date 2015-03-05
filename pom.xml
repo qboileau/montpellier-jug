@@ -57,6 +57,13 @@
             <artifactId>jquery</artifactId>
             <version>2.1.0-2</version>
         </dependency>
+        
+        <!-- HTML Templating -->
+		<dependency>
+		    <groupId>org.wisdom-framework</groupId>
+		    <artifactId>wisdom-mustache-template-engine</artifactId>
+		    <version>0.7</version>
+		</dependency>
 
         <!-- Test dependencies -->
         <dependency>
