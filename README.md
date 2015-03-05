@@ -8,3 +8,7 @@
 > mvn install
 > mvn wisdom:run
 ```
+
+Then open [http://localhost:9000/](http://localhost:9000/)
+
+
