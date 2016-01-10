@@ -200,6 +200,11 @@
       <name>oss-snapshot</name>
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </repository>
+    <repository>
+      <id>montpellier-jug</id>
+      <name>Montpellier JUG</name>
+      <url>http://nexus.odysseyproject.ninja/content/groups/public/</url>
+    </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
