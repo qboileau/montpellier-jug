@@ -39,7 +39,7 @@ properties:
   activity:
     label: Activity
     description: Main or opensource activity
-  compan:
+  company:
     label: Company
     description: Company or Opensource project
   url:

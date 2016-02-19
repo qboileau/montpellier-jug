@@ -35,6 +35,7 @@
           <schemas>
             <schema>jug</schema>
           </schemas>
+          <baselineOnMigrate>true</baselineOnMigrate>
         </configuration>
         <dependencies>
           <dependency>
@@ -47,7 +48,7 @@
           <execution>
             <id>rebuild-db</id>
             <goals>
-              <goal>clean</goal>
+              <goal>repair</goal>
               <goal>migrate</goal>
             </goals>
           </execution>
