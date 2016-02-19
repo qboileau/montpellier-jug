@@ -29,9 +29,9 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>${flyway.version}</version>
         <configuration>
-          <url>jdbc:postgresql:jugbuild</url>
-          <user>jug</user>
-          <password>jug</password>
+          <url>jdbc:postgresql://163.172.8.180:5432/test</url>
+          <user>test</user>
+          <password>test</password>
           <schemas>
             <schema>jug</schema>
           </schemas>
