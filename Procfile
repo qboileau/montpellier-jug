@@ -1,1 +1,1 @@
-web: sh start-heroku.sh
+web: sh start-dokku.sh
