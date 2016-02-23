@@ -209,9 +209,9 @@
             <user>jug</user>
             <password>jug</password>
 -->
-          <url>jdbc:postgresql://163.172.8.180:5432/test</url>
-          <user>test</user>
-          <password>test</password>
+          <url>${database.url}</url>
+          <user>${database.user}</user>
+          <password>${database.password}</password>
 
           </jdbc>
 
