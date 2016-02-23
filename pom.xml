@@ -33,6 +33,28 @@
 
   </properties>
 
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <database.url>${env.DB_URL}</database.url>
+        <database.user>${env.DB_USER}</database.user>
+        <database.password>${env.DB_PASS}</database.password>
+      </properties>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <database.url>jdbc:postgresql://163.172.8.180:5432/test</database.url>
+        <database.user>test</database.user>
+        <database.password>test</database.password>
+      </properties>
+    </profile>
+  </profiles>
+
 
   <modules>
     <module>montpellier-jug-database</module>

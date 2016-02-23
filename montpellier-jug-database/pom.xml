@@ -29,9 +29,9 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>${flyway.version}</version>
         <configuration>
-          <url>jdbc:postgresql://163.172.8.180:5432/test</url>
-          <user>test</user>
-          <password>test</password>
+          <url>${database.url}</url>
+          <user>${database.user}</user>
+          <password>${database.password}</password>
           <schemas>
             <schema>jug</schema>
           </schemas>
@@ -93,23 +93,9 @@
                   <goal>migrate</goal>
                 </goals>
                 <configuration>
-                  <url>jdbc:postgresql:jugbuild</url>
-                  <user>jug</user>
-                  <password>jug</password>
-                  <schemas>
-                    <schema>jug</schema>
-                  </schemas>
-                </configuration>
-              </execution>
-              <execution>
-                <id>cleandb-proddb</id>
-                <goals>
-                  <goal>clean</goal>
-                </goals>
-                <configuration>
-                  <url>jdbc:postgresql:jug</url>
-                  <user>jug</user>
-                  <password>jug</password>
+                  <url>${database.url}</url>
+                  <user>${database.user}</user>
+                  <password>${database.password}</password>
                   <schemas>
                     <schema>jug</schema>
                   </schemas>
