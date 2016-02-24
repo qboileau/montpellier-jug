@@ -87,9 +87,9 @@ public class YamlIntrospector extends AbstractIntrospector implements Introspect
         HashMap<String, Object> propertyDef = yamlObject.getField("properties." + propertyName, HashMap.class);
         if (propertyDef != null) {
             Property property = new Property()
-                    .setVisible(propertyDef.get("visible") != null ? (Boolean) propertyDef.get("visible") : true)
-                    .setLabel(propertyDef.get("label") != null ? (String) propertyDef.get("label") : "")
-                    .setDescription(propertyDef.get("description") != null ? (String) propertyDef.get("description") : null);
+                    .setVisible((Boolean) propertyDef.getOrDefault("visible", true))
+                    .setLabel((String) propertyDef.getOrDefault("label", ""))
+                    .setDescription((String) propertyDef.getOrDefault("description", null));
             if (propertyDef.get("editor") != null) {
                 property.setEditor((Class<? extends EditorService>) Class.forName((String) propertyDef.get("editor")));
             }

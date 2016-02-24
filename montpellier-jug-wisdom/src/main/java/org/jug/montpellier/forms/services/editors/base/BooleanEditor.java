@@ -37,7 +37,7 @@ public class BooleanEditor extends BaseEditor implements Editor {
 
     @Override
     public String getAsText() {
-        return value ? TRUE : FALSE;
+        return (value == null || !value) ? FALSE : TRUE;
     }
 
     @Override
