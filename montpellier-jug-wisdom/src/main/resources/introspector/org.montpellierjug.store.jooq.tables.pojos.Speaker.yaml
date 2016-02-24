@@ -30,7 +30,7 @@
 listview:
   title: Speakers
   id: id
-  columns: photourl:|fullname:Name|compan:Company|email:Email
+  columns: photourl:|fullname:Name|company:Company|email:Email
 properties:
   id:
     visible: false
