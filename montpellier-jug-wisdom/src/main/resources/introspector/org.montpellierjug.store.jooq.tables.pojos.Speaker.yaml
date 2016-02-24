@@ -44,7 +44,7 @@ properties:
     description: Company or Opensource project
   url:
     label: Company Web site
-  personaurl:
+  personalurl:
     label: Personal Web site
   email:
     label: Email
@@ -53,9 +53,10 @@ properties:
   description:
     label: Tell us about you
     editor: org.jug.montpellier.forms.services.editors.extended.BigStringEditorService
-  jugMember:
+  jugmember:
     label: JUG member?
-  memberFct:
+    editor: org.jug.montpellier.forms.services.editors.base.BooleanEditorService
+  memberfct:
     label: Role in the JUG
   photourl:
     label: Photo URL
