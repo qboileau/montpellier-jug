@@ -43,14 +43,22 @@
         <database.url>${env.DB_URL}</database.url>
         <database.user>${env.DB_USER}</database.user>
         <database.password>${env.DB_PASS}</database.password>
+        <oauth.id>${env.OAUTH_ID}</oauth.id>
+        <oauth.secret>${env.OAUTH_SECRET}</oauth.secret>
+        <oauth.callback>http://www.jug-montpellier.org/oauth2/cb</oauth.callback>
+        <oauth.authenticated>http://www.jug-montpellier.org/admin/</oauth.authenticated>
       </properties>
     </profile>
     <profile>
       <id>dev</id>
       <properties>
-        <database.url>jdbc:postgresql://163.172.8.180:5432/test</database.url>
-        <database.user>test</database.user>
-        <database.password>test</database.password>
+        <database.url>jdbc:postgresql://localhost:5432/jug</database.url>
+        <database.user>jug</database.user>
+        <database.password>jug</database.password>
+        <oauth.id>360777772993-2ltneffc156df2mq5db9civvma98vels.apps.googleusercontent.com</oauth.id>
+        <oauth.secret>YsnPu9l7EfW66FIC87t4YziC</oauth.secret>
+        <oauth.callback>http://localhost:9000/oauth2/cb</oauth.callback>
+        <oauth.authenticated>http://localhost:9000/admin/</oauth.authenticated>
       </properties>
     </profile>
   </profiles>
