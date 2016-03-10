@@ -204,9 +204,15 @@
           <!-- JDBC connection parameters -->
           <jdbc>
             <driver>org.postgresql.Driver</driver>
+<!--
             <url>jdbc:postgresql:jugbuild</url>
             <user>jug</user>
             <password>jug</password>
+-->
+          <url>${database.url}</url>
+          <user>${database.user}</user>
+          <password>${database.password}</password>
+
           </jdbc>
 
           <!-- Generator parameters -->

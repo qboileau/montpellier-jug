@@ -30,7 +30,7 @@
 listview:
   title: Speakers
   id: id
-  columns: photourl:|fullname:Name|compan:Company|email:Email
+  columns: photourl:|fullname:Name|company:Company|email:Email
 properties:
   id:
     visible: false
@@ -39,12 +39,12 @@ properties:
   activity:
     label: Activity
     description: Main or opensource activity
-  compan:
+  company:
     label: Company
     description: Company or Opensource project
   url:
     label: Company Web site
-  personaurl:
+  personalurl:
     label: Personal Web site
   email:
     label: Email
@@ -53,9 +53,10 @@ properties:
   description:
     label: Tell us about you
     editor: org.jug.montpellier.forms.services.editors.extended.BigStringEditorService
-  jugMember:
+  jugmember:
     label: JUG member?
-  memberFct:
+    editor: org.jug.montpellier.forms.services.editors.base.BooleanEditorService
+  memberfct:
     label: Role in the JUG
   photourl:
     label: Photo URL
