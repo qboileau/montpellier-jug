@@ -50,7 +50,7 @@ public class EventsServiceImpl implements EventsService {
     private Event fillCurrent(IEvent currentEvent) {
         List<org.jug.montpellier.models.Talk> talks = talkDao.fetchByEventId(currentEvent.getId()).stream().map((ITalk talk) -> {
             return org.jug.montpellier.models.Talk.build(talk);
-        }).collect(Collectors.toList());
+        }).sorted((t1, t2) -> t1.getOrderinevent().compareTo(t2.getOrderinevent())).collect(Collectors.toList());
         List<ISpeaker> speakers = talks.stream().map((org.jug.montpellier.models.Talk talk) -> {
             ISpeaker speaker = speakerDao.fetchOneById(talk.getSpeakerId());
             talk.setSpeaker(speaker);

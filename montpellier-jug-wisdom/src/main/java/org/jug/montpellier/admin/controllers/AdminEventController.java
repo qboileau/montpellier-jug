@@ -96,7 +96,8 @@ public class AdminEventController extends JugController {
     @Role("admin")
     @Route(method = HttpMethod.POST, uri = "/new/")
     public Result saveNewTalk(@Body Event event) {
-        eventDao.update(event.into(new org.montpellierjug.store.jooq.tables.pojos.Event()));
+        event.setOpen(true);
+        eventDao.insert(event.into(new org.montpellierjug.store.jooq.tables.pojos.Event()));
         return redirect("..");
     }
 
