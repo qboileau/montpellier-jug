@@ -1,10 +1,5 @@
 package org.jug.montpellier.cartridges.events.services;
 
-import java.sql.Timestamp;
-import java.util.Calendar;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.apache.felix.ipojo.annotations.Component;
 import org.apache.felix.ipojo.annotations.Instantiate;
 import org.apache.felix.ipojo.annotations.Provides;
@@ -20,6 +15,11 @@ import org.montpellierjug.store.jooq.tables.interfaces.IEvent;
 import org.montpellierjug.store.jooq.tables.interfaces.ISpeaker;
 import org.montpellierjug.store.jooq.tables.interfaces.ITalk;
 import org.wisdom.api.http.Result;
+
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by manland on 26/04/15.
@@ -100,6 +100,18 @@ public class EventsServiceImpl implements EventsService {
                 .withParam("pastEvents", pastEvents)
                 .withParam("currentEvent", currentEvent)
                 .render();
+    }
+
+    @Override
+    public List<Event> getPastEvents() {
+        Timestamp today = new Timestamp(Calendar.getInstance().getTime().getTime());
+        return getAndBuild(org.montpellierjug.store.jooq.tables.Event.EVENT.DATE.lessThan(today));
+    }
+
+    @Override
+    public List<Event> getUpcomingEvents() {
+        Timestamp today = new Timestamp(Calendar.getInstance().getTime().getTime());
+        return getAndBuild(org.montpellierjug.store.jooq.tables.Event.EVENT.DATE.greaterOrEqual(today));
     }
 
 }
