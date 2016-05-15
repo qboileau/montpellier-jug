@@ -23,19 +23,25 @@ public class EventsRestController extends DefaultController {
     @Route(uri = "/{id}", method = HttpMethod.GET)
     @Async
     public Result get(@Parameter("id") Long id) throws IOException {
-        return ok(eventsService.getEvent(id)).json();
+        return ok(eventsService.getEvent(id))
+                .json()
+                .with(ACCESS_CONTROL_ALLOW_ORIGIN, "*");
     }
 
     @Route(uri = "/past", method = HttpMethod.GET)
     @Async
     public Result pastEvents() throws IOException {
-        return ok(eventsService.getPastEvents()).json();
+        return ok(eventsService.getPastEvents())
+                .json()
+                .with(ACCESS_CONTROL_ALLOW_ORIGIN, "*");
     }
 
     @Route(uri = "/upcoming", method = HttpMethod.GET)
     @Async
     public Result upcomingEvents() throws IOException {
-        return ok(eventsService.getUpcomingEvents()).json();
+        return ok(eventsService.getUpcomingEvents())
+                .json()
+                .with(ACCESS_CONTROL_ALLOW_ORIGIN, "*");
     }
 
 }
