@@ -114,4 +114,15 @@ public class EventsServiceImpl implements EventsService {
         return getAndBuild(org.montpellierjug.store.jooq.tables.Event.EVENT.DATE.greaterOrEqual(today));
     }
 
+    @Override
+    public IEvent getEvent(Long id) {
+        IEvent currentEvent = eventDao.findById(id);
+
+        if(currentEvent != null) {
+            currentEvent = fillCurrent(currentEvent);
+        }
+
+        return currentEvent;
+    }
+
 }
