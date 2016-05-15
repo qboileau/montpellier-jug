@@ -36,8 +36,8 @@ public class Event implements IEvent {
     private String location;
     @Property(displayLabel = "Map")
     private String map;
-    @Property(visible = false)
-    private Boolean open;
+    @Property(displayLabel = "Open?")
+    private boolean open;
     @Property(displayLabel = "Registration URL", description = "The url where participant can be registered (eventbrite)", editorService = WebSiteUrlEditorService.class)
     private String registrationurl;
     @Property(displayLabel = "Report", description = "Tell if the event was a success or not")
