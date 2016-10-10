@@ -379,12 +379,12 @@
     <repository>
       <id>jug-nexus-snapshot</id>
       <name>jug-nexus-snapshot</name>
-      <url>http://nexus.jug-montpellier.org/content/repositories/snapshots/</url>
+      <url>http://nexus.jug-montpellier.org/repository/snapshots/</url>
     </repository>
     <repository>
       <id>jug-nexus-release</id>
       <name>jug-nexus-release</name>
-      <url>http://nexus.jug-montpellier.org/content/repositories/releases/</url>
+      <url>http://nexus.jug-montpellier.org/repository/releases/</url>
     </repository>
   </repositories>
   <pluginRepositories>
