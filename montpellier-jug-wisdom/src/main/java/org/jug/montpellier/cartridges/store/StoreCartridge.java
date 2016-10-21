@@ -25,6 +25,6 @@ public class StoreCartridge implements Cartridge {
 
     @Override
     public int position() {
-        return 6;
+        return 7;
     }
 }
