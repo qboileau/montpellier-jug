@@ -2,6 +2,10 @@ package org.jug.montpellier.cartridges.store;
 
 import org.jug.montpellier.core.api.Cartridge;
 
+import org.apache.felix.ipojo.annotations.Component;
+import org.apache.felix.ipojo.annotations.Instantiate;
+import org.apache.felix.ipojo.annotations.Provides;
+
 /**
  * Created by fteychene on 21/10/16.
  */
